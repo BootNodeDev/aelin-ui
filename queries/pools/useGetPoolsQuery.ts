@@ -9,7 +9,7 @@ import { nameToIdMapping, NetworkId } from 'constants/networks';
 import { useGetPoolCreateds, PoolCreatedResult } from '../../subgraph';
 
 const useGetPoolsQuery = () => {
-	const isDev = process.env.NODE_ENV !== Env.PROD;
+	const isDev = true;
 
 	const networks = Object.entries(nameToIdMapping).filter(
 		([_, { isMainnet }]) => isMainnet !== isDev
